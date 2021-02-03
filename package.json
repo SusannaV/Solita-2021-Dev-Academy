@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ../nameapplication/ && npm run build --prod && cp -r build ../nameapp/",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Susanna Veijalainen",
   "license": "MIT",
@@ -21,6 +22,7 @@
     "mongoose": "^5.11.13"
   },
   "devDependencies": {
+    "eslint": "^7.19.0",
     "nodemon": "^2.0.7"
   }
 }
